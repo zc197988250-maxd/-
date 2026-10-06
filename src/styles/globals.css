@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { color-scheme: dark; }
+  html { scroll-behavior: smooth; background: #0b0b0b; }
+  body { margin: 0; min-width: 320px; background: #0b0b0b; color: #f1eee8; font-family: Inter, "Noto Sans SC", "Microsoft YaHei", sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  ::selection { background: #d6ff52; color: #0b0b0b; }
+  a { color: inherit; text-decoration: none; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+}
+
+@layer components {
+  .site-shell { @apply mx-auto w-full max-w-site px-5 sm:px-8 lg:px-12 2xl:px-16; }
+  .section-space { @apply py-20 sm:py-24 lg:py-32; }
+  .eyebrow { @apply text-[11px] font-semibold uppercase tracking-[0.22em] text-muted; }
+  .display-title { @apply font-display text-[clamp(2.75rem,6.2vw,7.5rem)] font-semibold leading-[0.92] tracking-[-0.055em]; }
+  .section-title { @apply font-display text-[clamp(2.25rem,4vw,4.75rem)] font-semibold leading-[0.96] tracking-[-0.045em]; }
+  .body-copy { @apply text-base leading-7 text-muted sm:text-lg sm:leading-8; }
+  .card { @apply rounded-card border border-line bg-panel; }
+  .button-primary { @apply inline-flex min-h-12 items-center justify-center rounded-full bg-warm px-6 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent; }
+  .button-secondary { @apply inline-flex min-h-12 items-center justify-center rounded-full border border-line px-6 text-sm font-semibold text-warm transition-colors duration-200 hover:border-warm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent; }
+  .rule { @apply border-t border-line; }
+}

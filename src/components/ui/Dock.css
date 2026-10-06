@@ -1,0 +1,59 @@
+.portfolio-dock-outer {
+  display: flex;
+  min-height: 4.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-dock-panel {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  background: rgba(8, 8, 8, 0.68);
+  padding: 0.35rem;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(18px);
+}
+
+.portfolio-dock-item {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  color: rgba(255, 255, 255, 0.58);
+  font-weight: 550;
+  letter-spacing: -0.01em;
+  outline: none;
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.portfolio-dock-item:first-child {
+  font-size: 11px !important;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.portfolio-dock-item:hover,
+.portfolio-dock-item:focus-visible,
+.portfolio-dock-item.is-active {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+.portfolio-dock-item:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-dock-item {
+    transition: none;
+  }
+}
